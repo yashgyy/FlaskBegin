@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p>Lets See how you perfomed</p>
+
+{% if checks|length ==0 %}
+<p>Congratulations You have passed the three requirments</p>
+{% else %}
+<p>Oh no here is where you got wrong</p>
+<ul>
+{% for name in checks %}
+    <li>{{name}}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+{% endblock %}
+
